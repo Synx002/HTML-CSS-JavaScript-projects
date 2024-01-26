@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,1000&family=Roboto&display=swap');
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f0eded;
+  }
+  
+  .slider-container {
+    position: relative;
+    width: 800px;
+    overflow: hidden;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .image-container {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  h1{
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin: 0;
+    padding: 50px 10px 10px 10px;
+    text-align: center;
+  }
+
+  p{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    text-align: center;
+  }
+  
+  button{
+    margin: 28px 0px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  button:hover{
+    background-color: #505050;
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .btn.prev {
+    left: 10px;
+  }
+  
+  .btn.next {
+    right: 10px;
+  }
+  
+  .btn:hover {
+    opacity: 1;
+  }
+
+  /* Menambahkan media query untuk tata letak seluler */
+@media screen and (max-width: 600px) {
+  .slider-container {
+    width: 300px; /* Lebar penuh di perangkat seluler */
+    height: 200px; /* Menyesuaikan tinggi secara otomatis */
+  }
+
+  .image-container {
+    flex-wrap: nowrap; /* Mencegah pemutaran vertikal pada perangkat seluler */
+  }
+
+  img {
+    width: 300px; 
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 24px; /* Ukuran font yang lebih kecil di perangkat seluler */
+    padding: 20px 10px 10px 10px; /* Padding yang lebih kecil */
+  }
+
+  p {
+    font-size: 14px; /* Ukuran font yang lebih kecil di perangkat seluler */
+    padding: 0px 10px;
+  }
+
+  button {
+    margin: 20px 0; /* Margin yang lebih kecil di perangkat seluler */
+    padding: 8px 15px; /* Padding yang lebih kecil */
+  }
+}
